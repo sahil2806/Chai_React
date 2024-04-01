@@ -1,13 +1,23 @@
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
 import {useEffect,useState} from "react"
 
+
+
+function useCurrencyInfo (currency){
+    const curr = currency.toUpperCase();
+    
+    const [data,setdata] = useState({})
+// api  ->  https://api.exchangerate-api.com/v4/latest/INR
+    useEffect(()=>{
+            fetch(`https://api.exchangerate-api.com/v4/latest/${currency}`)
+            .then((res)=> (res.json()))
+            .then((res) => setdata(res["rates"]))
+    },[currency])
+
+  
  
-function usecurrencyInfo(currency){
-    const  [data,setData] = useState({});
-     useEffect(()=>{
-        fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
-        .then((res)=>(res.json()))
-        .then((res)=>(setData(res[currency])))
-        console.log(data);
-     },[currency])
+    return data;
 }
+
+export default useCurrencyInfo;
