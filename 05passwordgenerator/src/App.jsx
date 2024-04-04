@@ -24,6 +24,8 @@ function App() {
     }
     setPassword(pass);
 
+    console.log(pass)
+
   } ,[length,numberAllowed,characterAllowed,setPassword])
  
   
