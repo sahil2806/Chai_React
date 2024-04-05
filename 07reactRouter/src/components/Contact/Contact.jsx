@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <> 
       <div>Contact</div>
-      <Link to= "/contact/contactchild" >Go To Contact Child</Link>
+      <Link to= '/contact/cc' >Go To Contact Child</Link>
     </>
   )
 }

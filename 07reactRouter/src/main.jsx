@@ -66,9 +66,9 @@ const router = createBrowserRouter(
       <Route path='github' element={<Github/>}/>
       <Route path='about' element={<About/>}/>
       <Route path='contact' element={<Contact/>}>
-          <Route path='contactchild' element={<ContactChild/>}/>  
+          <Route path='cc' element={<ContactChild/>}/>  
        </Route>
-      <Route path='user/:userid' element={<User/>}/>  
+      {/* <Route path='user/:userid' element={<User/>}/>   */}
       {/* use of useParams */}
 
 
