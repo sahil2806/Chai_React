@@ -3,6 +3,8 @@ import './App.css'
 import {useState,useEffect }from "react"
 import ThemeBtn from './components/ThemeBtn';
 import Card from './components/Card';
+ 
+
 function App() {
   
   const [themeMode,setThemeMode] = useState("light");
@@ -37,6 +39,7 @@ function App() {
           </div>
         </div>
       </div>
+       
     </ThemeProvider>
   )
 }

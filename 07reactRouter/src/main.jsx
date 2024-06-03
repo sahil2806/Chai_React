@@ -67,7 +67,7 @@ const router = createBrowserRouter(
       <Route path='about' element={<About/>}/>
       <Route path='contact' element={<Contact/>}>
           <Route path='cc' element={<ContactChild/>}/>  
-       </Route>
+      </Route>
       {/* <Route path='user/:userid' element={<User/>}/>   */}
       {/* use of useParams */}
 
